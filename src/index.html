@@ -1,119 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="/dist/output.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="/dist/output.css" rel="stylesheet"> -->
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Interior Consultant</title>
-</head>
-<body>
-    <main class="bg-[#181719]">
-        <nav id="navbar">
-            <div class="mx-auto max-w-7xl px-2 py-4 sm:px-6 lg-px-8">
-                <div class="flex justify-between items-center relative">
-                    <div>
-                        <h1 class="border-2 border-white border-2xl text-white px-1 uppercase">This Interior</h1>
-                    </div>
-                    <div class="md:items-center md:w-auto flex">
-                        <div class="text-white text-2xl md:flex hidden space-x-20">
-                            <p class="border-b-2 font-bold cursor-pointer">Home</p>
-                            <p class="cursor-pointer">Collection</p>
-                            <p class="cursor-pointer">About</p>
-                            <p class="cursor-pointer">Contact</p>
-                        </div>
-                    </div>
-                    <!-- Mobile Button -->
-                    <div id="hamburger" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                        <!-- Mobile menu button-->
-                        <button id="btn-open" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                          <span class="absolute -inset-0.5"></span>
-                          <span class="sr-only">Open main menu</span>
-                          <!--
+  </head>
+  <body>
+    <main class="flex min-h-screen flex-col bg-[#181719]">
+      <nav id="navbar">
+        <div class="px-8 mx-auto max-w-7xl px-2 py-4 sm:px-6">
+          <div class="relative flex items-center justify-between">
+            <div>
+              <h1 class="border-2xl border-2 border-white px-1 uppercase text-white">This Interior</h1>
+            </div>
+            <div class="flex md:w-auto md:items-center">
+              <div class="hidden space-x-20 text-2xl text-white md:flex">
+                <p class="cursor-pointer border-b-2 font-bold">Home</p>
+                <p class="cursor-pointer">Collection</p>
+                <p class="cursor-pointer">About</p>
+                <p class="cursor-pointer">Contact</p>
+              </div>
+            </div>
+            <!-- Mobile Button -->
+            <div id="hamburger" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button id="btn-open" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
                             Icon when menu is closed.
 
                             Menu open: "hidden", Menu closed: "block"
                           -->
-                          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                          </svg>
-
-                        </button>
-                        <button id="btn-close" type="button" class="hidden relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                            <span class="absolute -inset-0.5"></span>
-                          <span class="sr-only">CLose main menu</span>
-                            <!--
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+              <button id="btn-close" type="button" class="relative inline-flex hidden items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">CLose main menu</span>
+                <!--
                             Icon when menu is open.
 
                             Menu open: "block", Menu closed: "hidden"
                           -->
-                          <svg id="btn-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </div>
-                </div>
-                <div class="hidden mt-6" id="mobile-menu">
-                    <div class="space-y-1 px-2 pb-3 pt-2">
-                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-                      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
-                    </div>
-                </div>
+                <svg id="btn-close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-        </nav>
-
-        <section class="mx-auto">
-            <div class="mx-auto">
-                <div class="mt-20 flex justify-center space-x-96 items-center">
-                    <div class="w-28">
-                        <h1 class="text-white text-4xl font-bold">Moder Interior</h1>
-                        <p class="w-72 text-white mt-8 font-mono text-start">
-                            A full-Service residential & commercial interior
-                            design and staging company offering professional
-                            organizing & eco-services.
-                        </p>
-                        <div class="font-bold mt-3 justify-start gap-3 flex">
-                                <h1 class="text-white">
-                                    Read more
-                                </h1>
-                                <span class="text-white material-symbols-outlined">arrow_right_alt</span>
-                        </div>
-                    </div>
-
-                    <div class="items-start">
-                        <img width="580" height="340" class="" src="/src/assets/img/photo1.png" alt="photo1">
-                    </div>
-                </div>
+          </div>
+          <div class="mt-6 hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
             </div>
-            <div class="mx-auto flex flex-col z-50 -translate-y-8 translate-x-80 justify-center w-96 h-52 shadow-xl bg-[#181719]">
-                <div class="flex mx-6 space-y-2 gap-6">
-                    <img class="w-16 h-16 rounded-full" src="/src/assets/img/photo2.png" alt="" width="384" height="512">
-                    <figcaption class="font-medium">
-                        <div class="text-sky-500 dark:text-sky-400">
-                            Aliza Webber
-                        </div>
-                        <div class="text-slate-700 dark:text-slate-500">
-                          Interior designer
-                        </div>
-                    </figcaption>
-                </div>
-                <div class="flex justify-start mt-6 flex-wrap w-72 px-6">
-                    <h1 class="text-white font-semibold text-2xl">
-                        Designed in 2020 by Aliza Webber
-                    </h1>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </nav>
 
-        <footer class="flex justify-center text-white">
-            <p class="text-lg pt-3 mt-24">created by <span class="underline">Hidetora</span> - devChallenges.io</p>
-        </footer>
+      <section>
+        <div class="sm:flex-col items-start px-3">
+          <div class="px-6">
+            <div class="mt-20 flex flex-wrap lg:items-center lg:justify-center lg:space-x-96">
+              <div class=" sm:items-start">
+                <h1 class="text-4xl font-bold text-white">Moder Interior</h1>
+                <p class="mt-8 w-72 text-start font-mono text-white">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+                <div class="w-28 my-6 flex cursor-pointer justify-start gap-3 font-bold">
+                  <h1 class="text-white">Read more</h1>
+                  <span class="material-symbols-outlined text-white">arrow_right_alt</span>
+                </div>
+              </div>
+
+              <div class="items-start sm:items-center">
+                <img width="580" height="340" class="w-[564px]" src="/src/assets/img/photo1.png" alt="photo1" />
+              </div>
+            </div>
+          </div>
+          <div class="z-50 mx-auto flex lg:h-52 lg:w-96 sm:h-48 sm:w-64 flex-col justify-center bg-[#181719] shadow-xl sm:translate-x-36 lg:-translate-y-12 lg:translate-x-96">
+            <div class="mx-6 mt-6 flex gap-6 space-y-2">
+              <img class="h-16 w-16 rounded-full" src="/src/assets/img/photo2.png" alt="" width="384" height="512" />
+              <figcaption class="font-medium">
+                <div class="text-white dark:text-white">Aliza Webber</div>
+                <div class="text-slate-700 dark:text-slate-500">Interior designer</div>
+              </figcaption>
+            </div>
+            <div class="lg:mt-6 flex w-72 py-6 flex-wrap justify-start px-6">
+              <h1 class="text-2xl font-semibold text-white">Designed in 2020 by Aliza Webber</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="flex justify-center text-white">
+        <p class="mt-24 pt-3 text-lg">created by <span class="underline">Hidetora</span> - devChallenges.io</p>
+      </footer>
     </main>
-</body>
-<script src="index.js"></script>
+  </body>
+  <script src="index.js"></script>
 </html>
